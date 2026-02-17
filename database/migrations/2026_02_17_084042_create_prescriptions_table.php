@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
 
             // Foreign Keys
-            $table->foreignId('patient_id')->constrained()->onDelete('cascade');
             $table->foreignId('medicine_id')->constrained()->restrictOnDelete(); // Safety: Don't delete meds if they have history
             $table->foreignId('consultation_id')->constrained()->onDelete('cascade');
 
